@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPERMERCADO TRIUNFEÑO</title>
+      <style>
+
+* {
+  padding: 0;
+  margin: 0;
+   box-sizing: border-box;
+}
+
+#Encabezado {
+  width: 100%;
+  height:90px;
+  background-color: #e11a29;
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  padding: 1rem 0 1rem 4.5rem;
+  gap: 2rem; 
+}
+
+.menu-icono {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+}
+
+.menu {
+  width: 70px;
+  height: 8px;
+  background-color:  #e0e0e0;
+  border:none;
+  border-radius: 8px;
+}
+
+.menu:hover{
+      background-color: grey;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.buscador {
+  width: 800px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top:5%;
+  transform: translateX(-50%);
+  cursor: pointer;
+
+}
+
+
+#verde{
+   width: 100%;
+  height:40px;
+  background-color: #65af30;
+   font-family:calibri;
+  color:white;
+  font-weight:bold;
+ font-size:20px;
+ padding:10px;
+ font-style:italic;
+ letter-spacing:normal;
+ word-spacing:0.25rem;
+}
+
+
+.parte-verde {
+  width: 20%; 
+  height: 100%;
+  background-color: #65af30;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+
+.parte-verde:hover{
+      background-color: green;
+    transition-property: all;
+    transition-duration: none;
+    transition-timing-function: ease-in-out;
+}
+
+
+.verde{
+   width: 100%;
+  height:90px;
+  background-color: #65af30;
+  font-family:decaydence;
+  color:white;
+  font-weight:bold;
+  text-align:center;
+ font-size:40px;
+ padding:15px;
+ letter-spacing:0.75rem;
+}
+
+.contenedor{
+  display: flex;
+  align-items: center;        
+  overflow: hidden;
+  padding: 10px;
+  border-top: 2px solid #65b32e;
+  gap: 10px;                  
+}
+
+
+.categorias{
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  flex: 1;
+  scroll-behavior: smooth;
+}
+
+.categorias::-webkit-scrollbar {
+  padding:10px;
+  height: 4px; /* Hace la barra de scroll más delgada */
+}
+
+
+.categorias::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0; /* Color de esquinas o flechitas*/
+  border-radius: 10px;
+}
+
+.categorias::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color del fondo  */
+}
+
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  text-align: center;
+  font-size: 0.80rem;
+  font-family:arial,cascadia;
+  font-style:italic;
+  color: #333;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.productos:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  border-radius: 10%;
+}
+
+
+.icono {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.icono img{
+    Width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+.encabezado {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  border-radius:90%;
+    margin-left: 1200px; 
+  margin-right: auto;
+}
+
+.fin{
+   width: 100%;
+  height:90px;
+  background-color: #e11a29;
+  
+}
+
+.buscador input {
+  width: 800px;
+  height: 35px;
+  border: none;
+  padding: 0 15px;
+  border-radius: 20px ;
+}
+ .cartas{
+    display: flex;
+    width:90%;
+    margin:0px auto;
+ }
+
+.carta{
+width:300px;
+border:4px solid #ddd;
+border-radius:8px;
+font-family: Arial, Helvetica, sans-serif;
+margin: 20px;
+text-align: center;
+}
+
+.carta .impro{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    margin-top: 5px;
+}
+
+.cartas .descripcion{
+    padding:5px;
+}
+.cartas .titulo{
+    padding:5px;
+}
+.cartas .precio{
+    padding:5px;
+    margin-bottom: 15px;
+}
+
+</style>
+
+    </head>
+<body>
+  <header id="Encabezado">
+    <div class="menu-icono">
+      <hr class="menu">
+      <hr class="menu">
+      <hr class="menu">
+    </div>
+    
+  <div class="buscador">     <input type="text" placeholder="Buscar Producto...">
+ <div class="parte-verde"><img src="img/lupa.png" alt="Buscar" style="width: 20px; margin: 7px auto; display: block;"></div> </div>
+
+<div class="encabezado">
+  <a href="pro.html"><img src="img/log.jpg" alt="Logo Triunfeños" class="logo" ></a>
+</div>
+
+  </header>
+  
+  <div id="verde"><marquee behavior="scroll" direction="left" scrollamount="10">Todo lo que buscas en un solo lugar...Cerca de ti, cerca de tu familia</marquee></div>
+
+  <div class="contenedor">
+
+
+  <div class="categorias">
+
+    <div class="productos">
+      <div class="icono"> <a href="jug.html"><img src="img/juge.png"></a></div>
+      <p>Juguetes</p>
+    </div>
+
+    <div class="productos">
+      <div class="icono"> <a href="BJ.html"><img src="img/bebi.png"></a></div>
+      <p>Bebidas y Jugos</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"> <a href="lim.html"><img src="img/limp.png"></a></div>
+      <p>Limpieza</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"> <a href="lac.html"><img src="img/lact.png"></a></div>
+      <p>Lacteos</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"> <a href="masc.html"><img src="img/masc.png"></a></div>
+      <p>Mascotas</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><a href="FV.html"><img src="img/ver.png"></a></div>
+      <p>Frutas y Verduras</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><a href="pan.html"><img src="img/pn.png"></a></div>
+      <p>Pan y Harinas</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><a href="car.html"><img src="img/carne-removebg-preview.png"></a></div>
+      <p>Carnes y Embutidos</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><a href="CP.html"><img src="img/cui.png"></a></div>
+      <p>Cuidado Personal</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><a href="mate.html"><img src="img/mat.png"></a></div>
+      <p>Material Escolar</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><a href="dulces.html"><img src="img/del.png"></a></div>
+      <p>Dulces</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><a href="plasticos.html"><img src="img/plas.png"></a></div>
+      <p>Plásticos</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><img src="img/mdi.png"></div>
+      <p>Medicinas</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><img src="img/coci.png"></div>
+      <p>Cocina</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><img src="img/cer.png"></div>
+      <p>Cereales</p>
+    </div>
+
+      <div class="productos">
+      <div class="icono"><img src="img/maq.png"></div>
+      <p>Cosmeticos y Accesorios</p>
+    </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="cartas">
+    
+    <div class="carta">
+        <img src="img/manz.webp" class="impro" alt="manzana">
+        <div class="infopro">
+            <h3 class="titulo">Manzana Roja</h3>
+            <p class="descripcion">Delahuerta</p>
+            <p class="precio"> Lps. 10.00 por unidad</p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/tom.png" class="impro" alt="tomate">
+        <div class="infopro">
+            <h3 class="titulo">Tomate Rojo</h3>
+            <p class="precio"> Lps. 10.00 por unidad</p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/elo.webp" class="impro" alt="elote">
+        <div class="infopro">
+            <h3 class="titulo">Bandeja de Elotes</h3>
+            <p class="descripcion">Elote dulce</p>
+            <p class="precio"> Lps. 110.00 </p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/kiw.webp" class="impro" alt="kiwi">
+        <div class="infopro">
+            <h3 class="titulo">Kiwi</h3>
+            <p class="precio"> Lps. 22.00 </p>
+        </div>
+
+    </div>
+  </div>
+
+  
+  <div class="cartas">
+    
+    <div class="carta">
+        <img src="img/api.png" class="impro" alt="apio">
+        <div class="infopro">
+            <h3 class="titulo">Mazo de Apio</h3>
+            <p class="descripcion">Apio Verde</p>
+            <p class="precio"> Lps. 20.00 </p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/fresa.webp" class="impro" alt="fresa">
+        <div class="infopro">
+            <h3 class="titulo">Fresa</h3>
+            <p class="precio"> Lps. 115.00 por libra</p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/per.webp" class="impro" alt="pera">
+        <div class="infopro">
+            <h3 class="titulo">Pera</h3>
+            <p class="precio"> Lps. 20.00 por unidad</p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/uvas.png" class="impro" alt="uvas">
+        <div class="infopro">
+            <h3 class="titulo">Uvas Rojas</h3>
+            <p class="precio"> Lps. 85.00 por libra</p>
+        </div>
+
+    </div>
+  </div>
+
+  
+  <div class="cartas">
+    
+    <div class="carta">
+        <img src="img/pap.jpg" class="impro" alt="papa">
+        <div class="infopro">
+            <h3 class="titulo">Papa Clasificada</h3>
+            <p class="precio"> Lps. 10.00 por unidad</p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/zan.webp" class="impro" alt="zanahoria">
+        <div class="infopro">
+            <h3 class="titulo">Zanahoria</h3>
+            <p class="precio"> Lps. 8.00 por unidad</p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/pina.webp" class="impro" alt="piña">
+        <div class="infopro">
+            <h3 class="titulo">Piña Ecuador</h3>
+            <p class="precio"> Lps. 45.00 por unidad</p>
+        </div>
+
+    </div>
+    <div class="carta">
+        <img src="img/lechu.jpg" class="impro" alt="lechuga">
+        <div class="infopro">
+            <h3 class="titulo"> Lechuga Iceberg</h3>
+            <p class="precio"> Lps. 21.00 por unidad</p>
+        </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+</html>
